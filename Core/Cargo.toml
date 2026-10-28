@@ -1,0 +1,18 @@
+[package]
+name = "tallytrail-core"
+version = "0.1.0"
+edition = "2021"
+description = "TallyTrail 的纯业务逻辑核心：本地单文件复式记账与资产管理"
+license = "MIT"
+
+[lib]
+name = "tallytrail_core"
+
+[dependencies]
+rusqlite = { version = "0.40", features = ["bundled"] }
+rusqlite_migration = "2.6"
+chrono = { version = "0.4", default-features = false, features = ["clock", "std"] }
+uuid = { version = "1", features = ["v4"] }
+
+[dev-dependencies]
+tempfile = "3"

@@ -1,0 +1,15 @@
+[package]
+name = "tallytrail-cli"
+version = "0.1.0"
+edition = "2021"
+description = "TallyTrail 命令行界面（仅调用 Core API）"
+license = "MIT"
+
+[[bin]]
+name = "tallytrail"
+path = "src/main.rs"
+
+[dependencies]
+tallytrail-core = { path = "../Core" }
+clap = { version = "4.6", features = ["derive"] }
+chrono = { version = "0.4", default-features = false, features = ["clock", "std"] }
